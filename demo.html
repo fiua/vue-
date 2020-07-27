@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <div class="page-top">
+        <div class="page-content">任务计划表</div>
+    </div>
+    <div class="main">
+        <h3 class="big-title">添加任务：</h3>
+        <input type="text" class="task-input" v-model="inputValue" @keyup.13="submits">
+        <ul class="task-count">
+            <li class="task-left"><span>{{filterList}}</span>项任务未完成</li>
+            <li class="action">
+                <a href="#all">所有任务</a>
+                <a href="#finsh">未完成任务</a>
+                <a href="#unfinsh">完成任务</a>
+            </li>
+        </ul>
+        <h3 class="big-title">任务列表</h3>
+        <div class="tasks">
+            <span class="no-task-tip" v-show="list.length==0">未添加任何项目</span>
+            <ul class="todolist">
+                <li :class="{list:true,editting:edittingtodo===ele}" v-for="ele in listchecked">
+                    <!-- editting是true，edit就是block -->
+                    <div class="view">
+                        <input type="checkbox" class="toggle" v-model="ele.jay">
+                        <label for="" :class="{comput:ele.jay}" @dblclick="edittodo(ele)">{{ele.name}}</label>
+                        <button class="destroy" @click="deletes(ele)">X</button>
+                    </div>
+                    <input type="text" class="edit" v-model="ele.name" @keyup.13="edited" v-focus="edittingtodo===ele" @blur="edited" @keyup.27="clee(ele)">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./demo.js"></script>
+</body>
+</html>

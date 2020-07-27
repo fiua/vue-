@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+.page-top{
+    width: 100%;
+    height: 40px;
+    background-color: tomato;
+}
+.page-top .page-content{
+    width: 50%;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+.main{
+    width: 50%;
+    margin: 0 auto;
+}
+.main .big-title{
+    margin: 18.72px 0;
+}
+.main .task-input{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+}
+.main .task-count{
+    margin: 10px 0;
+    height: 40px;
+}
+.main .task-count .task-left{
+    float: left;
+    padding: 0 20px;
+    color: gray;
+}
+.main .task-count .task-left span{
+    color: red;
+    font-size: 18px;
+}
+.main .task-count .action{
+    float: right;
+}
+.main .task-count .action a{
+    text-decoration: none;
+    padding: 0 20px;
+    color: gray;
+
+}
+.main .task-count .action a:nth-of-type(3){
+    padding: 0 0 0 20px;
+}
+
+.main .tasks .no-task-tip{
+    color: gray;
+    display: block;
+}
+.main .tasks .todolist{
+    /* display: none; */
+}
+.main .tasks .todolist .list{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border-bottom: 2px solid red;
+}
+
+.main .tasks .todolist .list:hover .view .destroy{
+    display: block;
+}
+
+.main .tasks .todolist .edit{
+    display: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+.main .tasks .todolist .editting .edit{
+    display: block;
+}
+.main .tasks .todolist .list .view{
+    width: 100%;
+    height: 40px;
+}
+.main .tasks .todolist .editting .view{
+    display: none;
+    width: 100%;
+    height: 40px;
+}
+.main .tasks .todolist .list .view .toggle{
+
+}
+.main .tasks .todolist .list .view label{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    padding-left: 30px;
+}
+.main .tasks .todolist .list .view label.comput{
+    color: gray;
+    text-decoration: line-through;
+}
+
+.main .tasks .todolist .list .view .destroy{
+    float: right;
+    width: 30px;
+    height: 30px;
+    display:block;
+    margin: 5px auto;
+    background-color: honeydew;
+    border: 0;
+    outline: none;
+    display: none;
+}
+
+input[type="checkbox"] {
+    width: 1.64rem;
+    height: 1.64rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align: baseline;
+    line-height: 1.64rem;
+    position: relative;
+    border-radius: 50%;
+    outline: none;
+    -webkit-appearance: none;
+    border: 1px solid #fff;
+    /* ​-webkit-tab-highlight-color: rgba(0, 0, 0, 0); */
+    color: #fff;
+    background: #fff;
+}
+    
+input[type="checkbox"]::before {
+    
+     content: "";
+    
+     position: absolute;
+    
+     top: 0;
+    
+     left: 0;
+    
+     background: #fff;
+    
+     width: 100%;
+    
+    height: 100%;
+    
+    border: 1px solid #999999;
+    
+    border-radius: 50%;
+    
+    color: #fff;
+    
+}
+input[type=checkbox]:checked::before {
+    
+    content: "\2713";
+    
+    background-color: #657afe;
+    
+    border: 1px solid #657afe;
+    
+    position: absolute;
+    
+    top: 0;
+    
+    left: 0;
+    
+    width: 100%;
+    
+    color: #fff;
+    
+    font-size: 0.52rem;
+    
+    border-radius: 50%;
+}
